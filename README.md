@@ -1,43 +1,86 @@
-=# Reinstall-macOS-No.-
-This is No.‘I don't really know how many times’ for install my macOS system
-Only that felling never changed that I it is really makes me crazy.
+# Reinstall my macOS #
+#### This is No.'I don't really know how many times that I do.' ####  
+  
+- I still remember last time,  
+when my mac prentened like dying,  
+that cost me 5k for light the screen alive.  
+*(But last time is not System's problems)*  
 
-昨天醒来有一些照片需要处理 于是打开了电脑 
-然而mac读条到2/3的位置突然黑屏 再也没反应
-尝试重启n次无果
+- And now problems just change a clothes and  comes again.  
+I just really wanna try to solve this problem wiz myself.
+
+## Here make some note. ##     
+> 1. For always notice myself to be calm,  
+and remember stay hungry how important for life.  
+
+> 2. Actually most important thing is,   
+**What if next time wiz this issue again.**  
+>> + ### Ok here is the tips ###    
+
+>> >+ ` PRAM `  and ` NVRAM`   always need to try.
+> >> >>  [https://support.apple.com/zh-cn/HT204063]()   
+
+>>>+ Then try to reinstall your macOS wiz:
+
+> >>>>`Command-R`\ `Command-Option-R`\ ` Shift-Option-Command-R `  
+
++ About that two, have too much imformation can find.  
++ So then just write some really useful  
++ **Because** 
+ + **Sure that all is not suit for me**
+>> + Last week, my keyboard was surddenly broken,  
+so I just use USB keyboard,  
+everytime when I tap that key,  
+I got fail, still go in the black screen.
+>> + I try to recover it,  
+but failed again.  
+I don't know why, maybe APFS? I am not sure.  
+>>+ So I have to try to fix wiz Internet,   I tried three times,  
+but still failed. 
++ >>> Everytime is same situation.   
+after long time wait for download and install all done,  
+when log in system almost 80%.  
+I pray for 100 times in my heart.   
+Then miracle just show me --- screen just flash ?!?!  
+it is really makes me know what is fallen from the sky.  
+>>+ So the next step,  
+I try to make a Usb for help my mac reinstall,  
+but unfortunately, still get some mistakes,  
+mac can't choose it to restar.  
+
+>>+ Almost quiet.
+
++ >>>  But all that files is not backup, 
+  I still want them so bad. 
++ >>So I go search some code and think maybe that gonna help.  
+Even not,  can not get more worst.
++>> So finally I just tap the `Command-S`to use the 
+```
+Single-User Mode
+```
+
++ **Still failed a couple of times,  
+but finally it is really worked.**
 
 
-大概在这里记录一下
-以免下一次遇到同样问题
+>> + Almost depended on this link
+[http://macsage.com/mounting-usb-drive-in-single-user-mode/]()  
 
++ >>>During that copid,  
+I got a problem is I only have one **NTFS** empty usb drive.  
+another three all full or nearly.
+I tried to format so many times,  
+but  `ROOT` stiil not enough power,only can load.  
 
-网上大部分的办法都是重置PRVM 或者NVRAM 还有说Shift安全模式的 但是对我都没用
-前阵子mac的键盘莫名失灵 一直在用外接 启动的时候有很多功能组合键都无法操作
-唯一庆幸Command+R还能用 然而
-依然没有任何用
++ >>> Then I just try to reboot and restar again,   
+this time I use `Command-R` and open Terminal wiz `csrutil disable`  
+Finally,  worked!!  
+Mac mount my NTFS and can use `cp -R / ` to force system copy my things to my usb.  ==`cp `is not allowed you to copid the directory. so just use` - R /`==
 
++ ==Btw== someone say if you still have this problem,   
++ and your usb drive is not enough for your system, you can use Disk toll to make `DMG`.  
+***
 
-无论是option/shift/command任意组合+R 
-最后都是进入同一个界面
-实用工具恢复部分
-由于10.13之后强行SSD变成Apfs
-挂载也莫名不能卸载
-所以也不能急救
-反正莫名其妙一团乱
-于是死马当成活马医
-打算重装macOS
-但是试了两次 每一次都是下载完了
-安装完了 
-开始读条进入的时候logo和进度下出现菊花
-以及！！！！
-整个画面开始不间断的闪
-几个小时无果 
-大概知道我需要抹盘这步了……
-但是还有很多的文件 素材在电脑里
-都没来得及备份
-无奈拿出win7打算做个安装盘 
-然而mac根本不认
-好一顿折腾
-记录一下综合的几个地方看到的代码吧
+**After this,  I really hope that I can always remember how important `Time Machine` it is.**
 
 
