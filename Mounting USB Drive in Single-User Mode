@@ -1,0 +1,63 @@
+Mounting USB Drive in Single-User Mode
+
+Here are the steps I took:
+
+Connect USB drive to Mac and boot into single-user mode (cmd-s)
+At prompt type:
+'''
+/sbin/mount -uw / 
+'''
+then hit return
+
+At prompt type:
+```
+/sbin/fsck -fy
+```
+then hit return
+
+At prompt type:
+```
+ls /Volumes  
+```
+then hit return. This should provide a list of mounted volumes. It’s likely that your USB drive will not show. If this is true, then you will need to create a sharepoint in the /Volumes directory. You do this by using this command (in this case, we are creating a directory called “usb”):
+
+```
+mkdir /Volumes/usb
+
+```
+then hit return
+
+Next we need to identify the disk number of the USB drive. This is done with this command:
+```
+ls /dev/disk*
+```
+then hit return.  
+The system will list the disks
+
+In most cases, the USB drive will be the last disk number listed (in this case: disk0s3).
+
+Now, to mount this disk to your sharepoint, type the following command:
+```
+/sbin/mount_msdos /dev/disk0s3 /Volumes/usb
+```  
+then hit return. NOTE: In this case, we are using disk0s3 since it is the last listed. Yours will likely be different. Also note that my Western Digital USB drive uses the msdos format. Yours may not.
+
+If this is mounted properly, you will be able to see the contents of your USB drive by using this command:
+```
+ls /Volumes/usb
+```
+then hit return
+
+If you have successfully mounted the USB drive, you may now copy files using the cpcommand. (In this example, I will copy a file named “testfile” and assume the Mac has a volume named MacHardDrive.) For example:
+```
+cp /Volumes/MacHardDrive/testfile /Volumes/usb/
+```
+then hit return.
+
+You can use this method to copy entire directories from your ailing Mac to the USB drive. In my case, I copied the entire user account directory over to the USB drive so I would keep settings, mail, music, pictures, and files in my Documents directory.
+
+
+Mac still copy files,  
+So just use Win7 to write this,  
+In case forget.
+This all copy from [http://macsage.com/mounting-usb-drive-in-single-user-mode/]()  
